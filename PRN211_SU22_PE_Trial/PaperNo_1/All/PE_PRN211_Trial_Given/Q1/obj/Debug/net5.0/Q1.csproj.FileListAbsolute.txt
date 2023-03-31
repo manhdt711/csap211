@@ -1,0 +1,16 @@
+C:\Users\ADMIN\Desktop\se\kì 5\1_PRN211\ôn pe\PRN211_SU22_PE_Trial\PaperNo_1\All\PE_PRN211_Trial_Given\Q1\bin\Debug\net5.0\Q1.exe
+C:\Users\ADMIN\Desktop\se\kì 5\1_PRN211\ôn pe\PRN211_SU22_PE_Trial\PaperNo_1\All\PE_PRN211_Trial_Given\Q1\bin\Debug\net5.0\Q1.deps.json
+C:\Users\ADMIN\Desktop\se\kì 5\1_PRN211\ôn pe\PRN211_SU22_PE_Trial\PaperNo_1\All\PE_PRN211_Trial_Given\Q1\bin\Debug\net5.0\Q1.runtimeconfig.json
+C:\Users\ADMIN\Desktop\se\kì 5\1_PRN211\ôn pe\PRN211_SU22_PE_Trial\PaperNo_1\All\PE_PRN211_Trial_Given\Q1\bin\Debug\net5.0\Q1.runtimeconfig.dev.json
+C:\Users\ADMIN\Desktop\se\kì 5\1_PRN211\ôn pe\PRN211_SU22_PE_Trial\PaperNo_1\All\PE_PRN211_Trial_Given\Q1\bin\Debug\net5.0\Q1.dll
+C:\Users\ADMIN\Desktop\se\kì 5\1_PRN211\ôn pe\PRN211_SU22_PE_Trial\PaperNo_1\All\PE_PRN211_Trial_Given\Q1\bin\Debug\net5.0\Q1.pdb
+C:\Users\ADMIN\Desktop\se\kì 5\1_PRN211\ôn pe\PRN211_SU22_PE_Trial\PaperNo_1\All\PE_PRN211_Trial_Given\Q1\obj\Debug\net5.0\Q1.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Desktop\se\kì 5\1_PRN211\ôn pe\PRN211_SU22_PE_Trial\PaperNo_1\All\PE_PRN211_Trial_Given\Q1\obj\Debug\net5.0\Q1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\Desktop\se\kì 5\1_PRN211\ôn pe\PRN211_SU22_PE_Trial\PaperNo_1\All\PE_PRN211_Trial_Given\Q1\obj\Debug\net5.0\Q1.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Desktop\se\kì 5\1_PRN211\ôn pe\PRN211_SU22_PE_Trial\PaperNo_1\All\PE_PRN211_Trial_Given\Q1\obj\Debug\net5.0\Q1.AssemblyInfo.cs
+C:\Users\ADMIN\Desktop\se\kì 5\1_PRN211\ôn pe\PRN211_SU22_PE_Trial\PaperNo_1\All\PE_PRN211_Trial_Given\Q1\obj\Debug\net5.0\Q1.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\se\kì 5\1_PRN211\ôn pe\PRN211_SU22_PE_Trial\PaperNo_1\All\PE_PRN211_Trial_Given\Q1\obj\Debug\net5.0\Q1.dll
+C:\Users\ADMIN\Desktop\se\kì 5\1_PRN211\ôn pe\PRN211_SU22_PE_Trial\PaperNo_1\All\PE_PRN211_Trial_Given\Q1\obj\Debug\net5.0\refint\Q1.dll
+C:\Users\ADMIN\Desktop\se\kì 5\1_PRN211\ôn pe\PRN211_SU22_PE_Trial\PaperNo_1\All\PE_PRN211_Trial_Given\Q1\obj\Debug\net5.0\Q1.pdb
+C:\Users\ADMIN\Desktop\se\kì 5\1_PRN211\ôn pe\PRN211_SU22_PE_Trial\PaperNo_1\All\PE_PRN211_Trial_Given\Q1\obj\Debug\net5.0\Q1.genruntimeconfig.cache
+C:\Users\ADMIN\Desktop\se\kì 5\1_PRN211\ôn pe\PRN211_SU22_PE_Trial\PaperNo_1\All\PE_PRN211_Trial_Given\Q1\obj\Debug\net5.0\ref\Q1.dll

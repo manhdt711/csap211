@@ -1,0 +1,65 @@
+dotnet add package Microsoft.EntityFrameworkCore.Design --version 5.0.17
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 5.0.17
+dotnet add package Microsoft.Extensions.Configuration.Json --version 6.0.0
+dotnet add package System.Data.SqlClient --version 4.8.3
+------session------------------------------------------------------------------------
+dotnet add package Microsoft.AspNetCore.Session
+dotnet add package Microsoft.Extensions.Caching.Memory
+
+ services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30); // session timeout
+                options.Cookie.HttpOnly = true; // cookie is only accessible via HTTP
+                options.Cookie.IsEssential = true; // cookie is essential for the app to work correctly
+            });
+
+app.UseSession();
+--------------------------------------------------------------------------------------------
+Integrated security=true; TrustServerCertificate=true;
+dotnet ef dbcontext scaffold "Server=localhost;Database=QLDIEM_HoTenSV;User Id=sa;Password=123;" Microsoft.EntityFrameworkCore.SqlServer --output-dir Models
+----------------------------------------------appsettings.json-----------------------------------------------------------------------
+"ConnectionStrings": {
+    "MyContr": "Server=localhost;Database=PE_PRN_Sum21;user=sa;password=123"
+  }
+
+
+
+-------------------------------context.cs-------------------------------------------------------------------------------------------------------------------------------
+
+optionsBuilder.UseSqlServer(new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetConnectionString("MyContr"));
+
+
+
+
+------------------------------------Startup.cs:(.net5)---------------------------------------------------------------------------------------------------------
+
+services.AddControllersWithViews();
+app.UseEndpoints(endpoints =>
+            {
+                //endpoints.MapGet("/", async context =>
+                //{
+                //    await context.Response.WriteAsync("Hello World!");
+                //});
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Employee}/{action=List}/{id?}"
+                    );
+            });
+
+------------------------------------Program.cs:(.net6)---------------------------------------------------------------------------------------------------------
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllersWithViews();
+
+var app = builder.Build();
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Movies}/{action=Producer_Movie}"
+
+    );
+app.Run();
+
+--------------------------------------------------------------------Folder Name--------------------------------------
+-Controllers
+-Views

@@ -1,0 +1,61 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using Q2.Models
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Page Title</title>
+
+    <!-- Bootstrap CSS -->
+
+</head>
+<body>
+    <h1>List of movies</h1>
+    <div style="width=100%;display:flex;">
+        <div style="width=20%;">
+            @foreach (Producer pro in ViewBag.producerList)
+        {
+                <a href="/Movies/Producer_Movie?pid=@pro.Id"> @pro.Name</a>
+
+                <br />
+            
+        }
+        </div>
+        <div style="width=80%;">
+            <table>
+                <tr>
+                    <td>Title</td>
+                    <td>Realease Date</td>
+                    <td>Description</td>
+                    <td>Language</td>
+                    <td>Director</td>
+                    <td>Producer</td>
+                    <td>Genres</td>
+                </tr>
+                @foreach (Movie e in ViewBag.MovieList)
+                {
+                    <tr>
+                        <td>@e.Title</td>
+                        <td>@e.ReleaseDate</td>
+                        <td>@e.Description</td>
+                        <td>@e.Language</td>
+                        <td>@e.Director.FullName</td>
+                        <td>@e.Producer.Name</td>
+                        <td>
+                        @foreach (Genre g in e.Genres){
+                            @g.Title<br />
+                        }
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</body>
+</html>
