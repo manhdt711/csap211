@@ -1,0 +1,40 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using Q3.Models
+<html>
+<head>
+
+</head>
+<body>
+    <h1>List of class</h1>
+    <form id="selectForm" action="@Url.Action("Index", "Class")" method="post">
+        <select id="employeeSelect" name="employeeId" onchange="document.getElementById('selectForm').submit()">
+           <option value="1"> Grade 1</option>
+            <option value="2">Grade 2</option>
+            <option value="3">Grade 3</option>
+            <option value="4">Grade 4</option>
+            <option value="5">Grade 5</option>
+        </select>
+    </form>
+    <table>
+        <tr>
+            <td></td>
+            <td>Title</td>
+            <td>Grade</td>
+            <td>Room</td>
+        </tr>
+        @foreach (Class cl in ViewBag.clList)
+        {
+            <tr>
+                <td>@cl.Id</td>
+                <td>@cl.Title</td>
+                <td>@cl.Grade</td>
+                <td>@cl.Room</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

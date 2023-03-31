@@ -1,0 +1,73 @@
+﻿@using Microsoft.AspNetCore.Http;
+@{
+    string Sessionvalue = null;
+
+if (ViewContext.HttpContext.Session != null)
+{
+    Sessionvalue = ViewContext.HttpContext.Session.GetString("sessionAccount");
+}
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - eStore</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">eStore</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        @if (!string.IsNullOrEmpty(Sessionvalue) && Sessionvalue.Equals("admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="/Order/Index">Order Management</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="/Product/Index">Product Management</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="/Member/Index">Member Management</a>
+                            </li>
+                        }@if (!string.IsNullOrEmpty(Sessionvalue) && !Sessionvalue.Equals("admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="/Member/Details/@int.Parse(Sessionvalue)">View Profile</a>
+                            </li><li class="nav-item">
+                                <a class="nav-link text-dark" href="/OrderDetail/Index/@int.Parse(Sessionvalue)">Order Details</a>
+                            </li>
+                        }
+                        <li class="nav-item" style="margin-left: 90%">
+                            <a class="nav-link text-dark" href="/Member/Logout">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            <label>Duong Tien Manh - HS163059</label>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
